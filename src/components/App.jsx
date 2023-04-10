@@ -1,16 +1,13 @@
+import { data } from '../data/users'
+import { UserList } from './user-list/UserList';
+import { User } from './user/User'
+
+
 export const App = () => {
   return (
-    <div
-      style={{
-        height: '100vh',
-        display: 'flex',
-        justifyContent: 'center',
-        alignItems: 'center',
-        fontSize: 40,
-        color: '#010101'
-      }}
-    >
-      React homework template
-    </div>
+    <>
+    <User user={data[0]} />
+    <UserList users={data} />
+    </>
   );
 };
