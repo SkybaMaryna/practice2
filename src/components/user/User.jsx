@@ -1,11 +1,24 @@
-import { Paragraph, Span } from "./User.styled"
+import { Button } from 'components/button/Button';
+import { Paragraph, Span } from './User.styled';
 
-export const User = ({ user: { name, email } }) => {
-    const ValidEmail = email.endsWith('biz')
-    return (
+export const User = ({ user: { name, email, id }, deleteUser }) => {
+  const ValidEmail = email.endsWith('biz');
+  return (
     <>
-     <Paragraph>Name: <Span>{name}</Span></Paragraph>
-     <Paragraph>Email: <Span isRed={ValidEmail}>{email}</Span></Paragraph>
-    </>)
-}
-
+      <Paragraph>
+        Name: <Span>{name}</Span>
+      </Paragraph>
+      <Paragraph>
+        Email: <Span isRed={ValidEmail}>{email}</Span>
+      </Paragraph>
+      <button
+        type="button"
+        onClick={() => {
+          deleteUser(id);
+        }}
+      >
+        Delete
+      </button>
+    </>
+  );
+};
