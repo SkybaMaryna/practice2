@@ -1,4 +1,3 @@
-import { Button } from 'components/button/Button';
 import { Paragraph, Span } from './User.styled';
 
 export const User = ({ user: { name, email, id }, deleteUser }) => {

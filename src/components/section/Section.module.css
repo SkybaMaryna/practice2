@@ -5,5 +5,5 @@
 
 .superSection {
     composes: section;
-    background-color: red;
+    background-color: gray;
 }

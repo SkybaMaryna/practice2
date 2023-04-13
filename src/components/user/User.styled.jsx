@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 
 // export const Paragraph = styled.p`
 // font-size: 24px;
@@ -15,18 +15,17 @@ import styled from "styled-components";
 // `
 
 export const Span = styled.span`
-    color: ${props => props.isRed ? "red" : "green"}
-`
+  color: ${props => (props.isRed ? 'red' : 'green')};
+`;
 
 export const Paragraph = styled.p`
-font-size: 24px;
-color: blue;
-background-color: lightblue;
-&:hover {
+  font-size: 24px;
+  color: blue;
+  background-color: lightblue;
+  &:hover {
     color: red;
-}
+  }
   &:hover ${Span} {
-        background-color: cyan;
-    }
-`
-
+    background-color: cyan;
+  }
+`;
